@@ -44,7 +44,7 @@ The DDPG algorithm is as follows:
 ![DDPG algo](ddpg.jpg)
 
 ## Model architecture
-The algorithm uses two deep neural networks (actor-critic) with the following struture:
+The algorithm uses two deep neural networks (actor-critic) with the following structure:
 
 1. Actor
     - Hidden: (input, 256) - ReLU
