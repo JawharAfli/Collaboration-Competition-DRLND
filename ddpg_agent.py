@@ -63,11 +63,7 @@ class MADDPGAgent:
         # Save experience / reward
         for i in range(self.num_agents):
             self.memory.add(
-                states[i, :],
-                actions[i, :],
-                rewards[i],
-                next_states[i, :],
-                dones[i]
+                states[i, :], actions[i, :], rewards[i], next_states[i, :], dones[i]
             )
 
         # Learn, if enough samples are available in memory
@@ -169,7 +165,9 @@ class OUNoise:
     def sample(self):
         """Update internal state and return it as a noise sample."""
         x = self.state
-        dx = self.theta * (self.mu - x) + self.sigma * np.random.standard_normal(self.size)
+        dx = self.theta * (self.mu - x) + self.sigma * np.random.standard_normal(
+            self.size
+        )
         self.state = x + dx
         return self.state
 

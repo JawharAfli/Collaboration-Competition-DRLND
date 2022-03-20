@@ -13,7 +13,7 @@ def ddpg(
     scores = []
     scores_deque = deque(maxlen=100)
     average_scores = []
-    agent= MADDPGAgent(state_size, action_size, num_agents, random_seed)
+    agent = MADDPGAgent(state_size, action_size, num_agents, random_seed)
 
     for i_episode in range(1, n_episodes + 1):
         env_info = env.reset(train_mode=True)[brain_name]
@@ -43,9 +43,7 @@ def ddpg(
         if i_episode % 100 == 0:
             print(
                 "\rEpisode {}\tAverage Score: {:.2f}\tEpisode Score: {:.2f}".format(
-                    i_episode,
-                    average,
-                    mean_episode_score
+                    i_episode, average, mean_episode_score
                 ),
                 end="\n",
             )
