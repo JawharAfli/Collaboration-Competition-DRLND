@@ -70,9 +70,7 @@ WEIGHT_DECAY = 0.0001   # L2 weight decay
 
 ```python
 DEVICE = "cuda:0"
-N_EPISODES = 2000 #max episode number
-MAX_T = 1000 #max timestep/episode
-UPDATE_EVERY = 10 #replay buffer update rate
+N_EPISODES = 4000 #max episode number
 ```
 
 ## Results
